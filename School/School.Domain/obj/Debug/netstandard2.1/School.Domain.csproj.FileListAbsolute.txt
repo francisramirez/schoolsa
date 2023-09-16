@@ -1,0 +1,10 @@
+D:\projs\School\School.Domain\bin\Debug\netstandard2.1\School.Domain.deps.json
+D:\projs\School\School.Domain\bin\Debug\netstandard2.1\School.Domain.dll
+D:\projs\School\School.Domain\bin\Debug\netstandard2.1\School.Domain.pdb
+D:\projs\School\School.Domain\obj\Debug\netstandard2.1\School.Domain.csproj.AssemblyReference.cache
+D:\projs\School\School.Domain\obj\Debug\netstandard2.1\School.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\projs\School\School.Domain\obj\Debug\netstandard2.1\School.Domain.AssemblyInfoInputs.cache
+D:\projs\School\School.Domain\obj\Debug\netstandard2.1\School.Domain.AssemblyInfo.cs
+D:\projs\School\School.Domain\obj\Debug\netstandard2.1\School.Domain.csproj.CoreCompileInputs.cache
+D:\projs\School\School.Domain\obj\Debug\netstandard2.1\School.Domain.dll
+D:\projs\School\School.Domain\obj\Debug\netstandard2.1\School.Domain.pdb

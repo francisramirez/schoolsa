@@ -1,0 +1,10 @@
+D:\projs\School\School.Application\bin\Debug\netstandard2.1\School.Application.deps.json
+D:\projs\School\School.Application\bin\Debug\netstandard2.1\School.Application.dll
+D:\projs\School\School.Application\bin\Debug\netstandard2.1\School.Application.pdb
+D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.csproj.AssemblyReference.cache
+D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.AssemblyInfoInputs.cache
+D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.AssemblyInfo.cs
+D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.csproj.CoreCompileInputs.cache
+D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.dll
+D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.pdb
