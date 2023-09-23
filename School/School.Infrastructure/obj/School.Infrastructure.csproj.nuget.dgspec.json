@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projs\\School\\School.Infrastructure\\School.Infrastructure.csproj": {}
+    "D:\\prosa\\schoolsa\\School\\School.Infrastructure\\School.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\projs\\School\\School.Infrastructure\\School.Infrastructure.csproj": {
+    "D:\\prosa\\schoolsa\\School\\School.Infrastructure\\School.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projs\\School\\School.Infrastructure\\School.Infrastructure.csproj",
+        "projectUniqueName": "D:\\prosa\\schoolsa\\School\\School.Infrastructure\\School.Infrastructure.csproj",
         "projectName": "School.Infrastructure",
-        "projectPath": "D:\\projs\\School\\School.Infrastructure\\School.Infrastructure.csproj",
+        "projectPath": "D:\\prosa\\schoolsa\\School\\School.Infrastructure\\School.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Francis Ramirez\\.nuget\\packages\\",
-        "outputPath": "D:\\projs\\School\\School.Infrastructure\\obj\\",
+        "outputPath": "D:\\prosa\\schoolsa\\School\\School.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

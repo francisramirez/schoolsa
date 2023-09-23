@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projs\\School\\School.Web\\School.Web.csproj",
+      "projectUniqueName": "D:\\prosa\\schoolsa\\School\\School.Web\\School.Web.csproj",
       "projectName": "School.Web",
-      "projectPath": "D:\\projs\\School\\School.Web\\School.Web.csproj",
+      "projectPath": "D:\\prosa\\schoolsa\\School\\School.Web\\School.Web.csproj",
       "packagesPath": "C:\\Users\\Francis Ramirez\\.nuget\\packages\\",
-      "outputPath": "D:\\projs\\School\\School.Web\\obj\\",
+      "outputPath": "D:\\prosa\\schoolsa\\School\\School.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projs\\School\\School.Api\\School.Api.csproj": {}
+    "D:\\prosa\\schoolsa\\School\\School.Api\\School.Api.csproj": {}
   },
   "projects": {
-    "D:\\projs\\School\\School.Api\\School.Api.csproj": {
+    "D:\\prosa\\schoolsa\\School\\School.Api\\School.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projs\\School\\School.Api\\School.Api.csproj",
+        "projectUniqueName": "D:\\prosa\\schoolsa\\School\\School.Api\\School.Api.csproj",
         "projectName": "School.Api",
-        "projectPath": "D:\\projs\\School\\School.Api\\School.Api.csproj",
+        "projectPath": "D:\\prosa\\schoolsa\\School\\School.Api\\School.Api.csproj",
         "packagesPath": "C:\\Users\\Francis Ramirez\\.nuget\\packages\\",
-        "outputPath": "D:\\projs\\School\\School.Api\\obj\\",
+        "outputPath": "D:\\prosa\\schoolsa\\School\\School.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
