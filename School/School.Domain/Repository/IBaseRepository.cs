@@ -1,5 +1,4 @@
 ﻿
-using School.Domain.Core;
 using System.Collections.Generic;
 
 namespace School.Domain.Repository

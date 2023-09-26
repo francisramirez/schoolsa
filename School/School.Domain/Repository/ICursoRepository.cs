@@ -1,5 +1,4 @@
 ﻿using School.Domain.Entities;
-
 using System.Collections.Generic;
 
 

@@ -8,3 +8,13 @@ D:\projs\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.AssemblyInfo.cs
 D:\projs\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.csproj.CoreCompileInputs.cache
 D:\projs\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.dll
 D:\projs\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.pdb
+D:\prosa\schoolsa\School\School.Ioc\bin\Debug\netstandard2.1\School.Ioc.deps.json
+D:\prosa\schoolsa\School\School.Ioc\bin\Debug\netstandard2.1\School.Ioc.dll
+D:\prosa\schoolsa\School\School.Ioc\bin\Debug\netstandard2.1\School.Ioc.pdb
+D:\prosa\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.csproj.AssemblyReference.cache
+D:\prosa\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.GeneratedMSBuildEditorConfig.editorconfig
+D:\prosa\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.AssemblyInfoInputs.cache
+D:\prosa\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.AssemblyInfo.cs
+D:\prosa\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.csproj.CoreCompileInputs.cache
+D:\prosa\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.dll
+D:\prosa\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.pdb

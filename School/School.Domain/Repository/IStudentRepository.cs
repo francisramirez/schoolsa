@@ -1,7 +1,7 @@
 ﻿using School.Domain.Entities;
-
+using System;
 using System.Collections.Generic;
-
+using System.Linq.Expressions;
 
 namespace School.Domain.Repository
 {
@@ -13,6 +13,7 @@ namespace School.Domain.Repository
         void Remove(Student student);
         List<Student> GetStudents();
         Student GetStudent(int Id);
+        bool Exists(Expression<Func<Student, bool>> filter);
 
     }
 }

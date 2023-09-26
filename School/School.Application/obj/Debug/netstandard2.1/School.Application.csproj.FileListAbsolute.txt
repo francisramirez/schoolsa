@@ -8,3 +8,13 @@ D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.A
 D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.csproj.CoreCompileInputs.cache
 D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.dll
 D:\projs\School\School.Application\obj\Debug\netstandard2.1\School.Application.pdb
+D:\prosa\schoolsa\School\School.Application\bin\Debug\netstandard2.1\School.Application.deps.json
+D:\prosa\schoolsa\School\School.Application\bin\Debug\netstandard2.1\School.Application.dll
+D:\prosa\schoolsa\School\School.Application\bin\Debug\netstandard2.1\School.Application.pdb
+D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.csproj.AssemblyReference.cache
+D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.AssemblyInfoInputs.cache
+D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.AssemblyInfo.cs
+D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.csproj.CoreCompileInputs.cache
+D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.dll
+D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.pdb
