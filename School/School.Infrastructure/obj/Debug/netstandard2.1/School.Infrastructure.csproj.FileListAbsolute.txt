@@ -21,3 +21,16 @@ D:\prosa\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.I
 D:\prosa\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.csproj.CopyComplete
 D:\prosa\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.dll
 D:\prosa\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.pdb
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\bin\Debug\netstandard2.1\School.Infrastructure.deps.json
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\bin\Debug\netstandard2.1\School.Infrastructure.dll
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\bin\Debug\netstandard2.1\School.Infrastructure.pdb
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\bin\Debug\netstandard2.1\School.Domain.dll
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\bin\Debug\netstandard2.1\School.Domain.pdb
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.AssemblyInfo.cs
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.csproj.CopyComplete
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.dll
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Infrastructure\obj\Debug\netstandard2.1\School.Infrastructure.pdb

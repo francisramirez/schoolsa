@@ -60,3 +60,34 @@ D:\prosa\schoolsa\School\School.Web\obj\Debug\net6.0\refint\School.Web.dll
 D:\prosa\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.pdb
 D:\prosa\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.genruntimeconfig.cache
 D:\prosa\schoolsa\School\School.Web\obj\Debug\net6.0\ref\School.Web.dll
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\bin\Debug\net6.0\appsettings.json
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\bin\Debug\net6.0\School.Web.staticwebassets.runtime.json
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\bin\Debug\net6.0\School.Web.exe
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\bin\Debug\net6.0\School.Web.deps.json
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\bin\Debug\net6.0\School.Web.runtimeconfig.json
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\bin\Debug\net6.0\School.Web.dll
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\bin\Debug\net6.0\School.Web.pdb
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.csproj.AssemblyReference.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.AssemblyInfoInputs.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.AssemblyInfo.cs
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.csproj.CoreCompileInputs.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.RazorAssemblyInfo.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.RazorAssemblyInfo.cs
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\staticwebassets\msbuild.School.Web.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\staticwebassets\msbuild.build.School.Web.props
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.School.Web.props
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.School.Web.props
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\scopedcss\bundle\School.Web.styles.css
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\scopedcss\projectbundle\School.Web.bundle.scp.css
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.dll
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\refint\School.Web.dll
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.pdb
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.genruntimeconfig.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Web\obj\Debug\net6.0\ref\School.Web.dll

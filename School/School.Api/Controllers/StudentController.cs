@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using School.Domain.Entities;
 using School.Domain.Repository;
+using School.Infrastructure.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,7 +21,7 @@ namespace School.Api.Controllers
         [HttpGet]
         public IEnumerable<Student> Get()
         {
-            var students = this.studentRepository.GetStudents();
+            var students = this.studentRepository.GetEntities();
             return students;
         }
 
@@ -28,7 +29,7 @@ namespace School.Api.Controllers
         [HttpGet("{id}")]
         public Student Get(int id)
         {
-            return this.studentRepository.GetStudent(id);
+            return this.studentRepository.GetEntity(id);
         }
 
         // POST api/<StudentController>
