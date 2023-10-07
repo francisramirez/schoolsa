@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using School.Api.Models.Module.Course;
+using School.Domain.Entities;
 using School.Infrastructure.Interfaces;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace School.Api.Controllers
 {
@@ -18,43 +19,76 @@ namespace School.Api.Controllers
 
 
         [HttpGet("GetCourseByDepartmentId")]
-        public IActionResult GetCourseByDepartmentId(int departmentId) 
+        public IActionResult GetCourseByDepartmentId(int departmentId)
         {
             var courses = this.courseRepository.GetCoursesByDepartment(departmentId);
             return Ok(courses);
         }
 
 
-        // GET: api/<CourseController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult GetCourses()
         {
-            return new string[] { "value1", "value2" };
+            var courses = this.courseRepository.GetEntities().Select(cd => new CourseGetAllModel()
+            {
+                CourseId = cd.CourseID,
+                ChanageDate = cd.CreationDate,
+                Credits = cd.Credits,
+                ChangeUser = cd.CreationUser, 
+                DepartmentID= cd.DepartmentID, 
+                Title= cd.Title
+            }).ToList();
+
+
+            return Ok(courses);
         }
 
         // GET api/<CourseController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("GetCourse")]
+        public IActionResult GetCourse(int id)
         {
-            return "value";
+            var course = this.courseRepository.GetEntity(id);
+            return Ok(course);
         }
 
-        // POST api/<CourseController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+
+        [HttpPost("SaveCourse")]
+        public IActionResult Post([FromBody] CourseAddModel courseAdd)
         {
+
+            Course course = new Course()
+            {
+                CreationDate = courseAdd.ChanageDate,
+                CreationUser = courseAdd.ChangeUser,
+                Credits = courseAdd.Credits,
+                DepartmentID = courseAdd.DepartmentID,
+                Title = courseAdd.Title
+            };
+
+            this.courseRepository.Save(course);
+
+            return Ok();
         }
 
-        // PUT api/<CourseController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+
+        [HttpPost("UpdateCourse")]
+        public IActionResult Put([FromBody] CourseUpdateModel courseUpdate)
         {
+            Course course = new Course()
+            {
+                CourseID = courseUpdate.CourseId,
+                CreationDate = courseUpdate.ChanageDate,
+                CreationUser = courseUpdate.ChangeUser,
+                Credits = courseUpdate.Credits,
+                DepartmentID = courseUpdate.DepartmentID,
+                Title = courseUpdate.Title
+            };
+
+            this.courseRepository.Update(course);
+
+            return Ok();
         }
 
-        // DELETE api/<CourseController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+
     }
 }
