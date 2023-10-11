@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using School.Api.Models.Modules.Student;
 using School.Domain.Entities;
 using School.Domain.Repository;
 
@@ -17,18 +18,41 @@ namespace School.Api.Controllers
             this.studentRepository = studentRepository;
         }
         // GET: api/<StudentController>
-        [HttpGet]
-        public IEnumerable<Student> Get()
+        [HttpGet("GetStudents")]
+        public IActionResult Get()
         {
-            var students = this.studentRepository.GetStudents();
-            return students;
+            var students = this.studentRepository.GetEntities()
+                                                 .Select(st =>
+                                                          new GetStudentModel()
+                                                          {
+                                                              CreationDate = st.CreationDate,
+                                                              EnrollmentDate = st.EnrollmentDate,
+                                                              FirstName = st.FirstName,
+                                                              LastName = st.LastName,
+                                                              StudentId = st.Id
+
+                                                          });
+
+            return Ok(students);
         }
 
         // GET api/<StudentController>/5
-        [HttpGet("{id}")]
-        public Student Get(int id)
+        [HttpGet("GetStudent")]
+        public IActionResult Get(int id)
         {
-            return this.studentRepository.GetStudent(id);
+            var student = this.studentRepository.GetEntity(id);
+
+            GetStudentModel studentModel = new GetStudentModel()
+            {
+                CreationDate = student.CreationDate,
+                EnrollmentDate = student.EnrollmentDate,
+                FirstName = student.FirstName,
+                LastName = student.LastName,
+                StudentId = student.Id
+            };
+
+
+            return Ok(studentModel);
         }
 
         // POST api/<StudentController>

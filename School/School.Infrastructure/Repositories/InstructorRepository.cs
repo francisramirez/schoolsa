@@ -1,5 +1,4 @@
 ﻿
-using Microsoft.EntityFrameworkCore;
 using School.Domain.Entities;
 using School.Domain.Repository;
 using School.Infrastructure.Context;

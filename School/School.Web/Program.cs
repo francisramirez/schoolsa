@@ -1,6 +1,27 @@
+using Microsoft.EntityFrameworkCore;
+using School.Domain.Repository;
+using School.Infrastructure.Context;
+using School.Infrastructure.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
+// Contexto //
+
+builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolContext")));
+
+
+// Repositories //
+
+builder.Services.AddTransient<IInstructorRepository, InstructorRepository>();
+
+// App Services //
+
+
+
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
