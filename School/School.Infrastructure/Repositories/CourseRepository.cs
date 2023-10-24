@@ -22,9 +22,28 @@ namespace School.Infrastructure.Repositories
             return this.context.Courses.Where(cd => cd.DepartmentID == departmentId 
                                               && !cd.Deleted).ToList();
         }
+
+        public List<Course> GetCoursesByDepartmentId(int departmentId)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public override List<Course> GetEntities()
         {
             return base.GetEntities().Where(co => !co.Deleted).ToList();
         }
+
+        public override void Save(Course entity)
+        {
+            base.Save(entity);
+            this.context.SaveChanges();
+        }
+        public override void Update(Course entity)
+        {
+            base.Update(entity);
+            this.context.SaveChanges();
+        }
+
+        
     }
 }

@@ -1,18 +1,20 @@
 ﻿
 using School.Domain.Entities;
-using School.Domain.Repository;
+
 using School.Infrastructure.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
+using School.Infrastructure.Core;
+using School.Infrastructure.Interfaces;
+
 
 namespace School.Infrastructure.Repositories
 {
-    public class InstructorRepository  
+    public class InstructorRepository   : BaseRepository<Instructor>, IInstructorRepository
     {
-         
 
+        public InstructorRepository(SchoolContext context) : base(context)
+        {
+
+        }
        
     }
 }

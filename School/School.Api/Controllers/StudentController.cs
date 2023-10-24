@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using School.Api.Models.Modules.Student;
+using School.Application.Contracts;
+using School.Application.Dtos.Student;
 using School.Domain.Entities;
 using School.Infrastructure.Interfaces;
 
@@ -10,66 +12,73 @@ namespace School.Api.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        private readonly IStudentRepository studentRepository;
+        private readonly IStudentService studentService;
 
-        public StudentController(IStudentRepository studentRepository)
+        public StudentController(IStudentService studentService)
         {
-            this.studentRepository = studentRepository;
+            this.studentService = studentService;
         }
-        // GET: api/<StudentController>
+
         [HttpGet("GetStudents")]
         public IActionResult Get()
         {
-            var students = this.studentRepository.GetEntities()
-                                                 .Select(st =>
-                                                          new GetStudentModel()
-                                                          {
-                                                              CreationDate = st.CreationDate,
-                                                              EnrollmentDate = st.EnrollmentDate,
-                                                              FirstName = st.FirstName,
-                                                              LastName = st.LastName,
-                                                              StudentId = st.Id
+            var result = this.studentService.GetAll();
 
-                                                          });
+            if (!result.Success)
+              return BadRequest(result);
 
-            return Ok(students);
+            return Ok(result);
         }
 
-        // GET api/<StudentController>/5
+
         [HttpGet("GetStudent")]
         public IActionResult Get(int id)
         {
-            var student = this.studentRepository.GetEntity(id);
+            var result = this.studentService.GetById(id);
+            
+            if (!result.Success)
+              return BadRequest(result);
 
-            GetStudentModel studentModel = new GetStudentModel()
-            {
-                CreationDate = student.CreationDate,
-                EnrollmentDate = student.EnrollmentDate,
-                FirstName = student.FirstName,
-                LastName = student.LastName,
-                StudentId = student.Id
-            };
-
-
-            return Ok(studentModel);
+            return Ok(result);
         }
 
-        // POST api/<StudentController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+
+        [HttpPost("SaveStudent")]
+        public IActionResult Post([FromBody] StudentDtoAdd studentApp)
         {
+
+            var result = this.studentService.Save(studentApp);
+            
+            if (!result.Success)
+                return BadRequest(result);
+            
+
+            return Ok(result);
         }
 
-        // PUT api/<StudentController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+
+        [HttpPost("UpdateStudent")]
+        public IActionResult Put([FromBody] StudentDtoUpdate studentDtoUpdate)
         {
+            var result = this.studentService.Update(studentDtoUpdate);
+
+            if (!result.Success)
+                return BadRequest(result);
+            
+           
+            return Ok(result);
+        }
+        [HttpPost("RemoveStudent")]
+        public IActionResult Remove([FromBody] StudentDtoRemove studentDtoRemove)
+        {
+            var result = this.studentService.Remove(studentDtoRemove);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+
+            return Ok(result);
         }
 
-        // DELETE api/<StudentController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

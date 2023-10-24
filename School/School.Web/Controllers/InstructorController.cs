@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using School.Domain.Repository;
+using School.Infrastructure.Interfaces;
 
 namespace School.Web.Controllers
 {
@@ -15,14 +16,14 @@ namespace School.Web.Controllers
         // GET: InstructorController
         public ActionResult Index()
         {
-            var instructors = this.instructorRepository.GetInstructors();
+            var instructors = this.instructorRepository.GetEntities();
             return View(instructors);
         }
 
         // GET: InstructorController/Details/5
         public ActionResult Details(int id)
         {
-            var instructor = this.instructorRepository.GetInstructor(id);
+            var instructor = this.instructorRepository.GetEntity(id);
             return View(instructor);
             
         }

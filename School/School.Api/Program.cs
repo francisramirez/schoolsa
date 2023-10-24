@@ -3,6 +3,7 @@ using School.Domain.Repository;
 using School.Infrastructure.Context;
 using School.Infrastructure.Interfaces;
 using School.Infrastructure.Repositories;
+using School.Ioc.Dependencies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,12 +15,19 @@ builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(bui
 //Dependencias de los repositorios //
 
 
-builder.Services.AddTransient<IStudentRepository, StudentRepository>();
+//builder.Services.AddTransient<IStudentRepository, StudentRepository>();
+
+builder.Services.AddStudentDependecy();
 
 builder.Services.AddTransient<ICourseRepository, CourseRepository>();
 
 
 //Dependencias de los app servicies //
+
+
+
+
+
 
 
 builder.Services.AddControllers();

@@ -5,4 +5,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Excepctions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\School.Infrastructure\School.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

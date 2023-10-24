@@ -11729,11 +11729,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Francis Ramirez\\Source\\Repos\\schoolsa\\School\\School.Web\\School.Web.csproj",
+      "projectUniqueName": "D:\\prosa\\schoolsa\\School\\School.Web\\School.Web.csproj",
       "projectName": "School.Web",
-      "projectPath": "C:\\Users\\Francis Ramirez\\Source\\Repos\\schoolsa\\School\\School.Web\\School.Web.csproj",
+      "projectPath": "D:\\prosa\\schoolsa\\School\\School.Web\\School.Web.csproj",
       "packagesPath": "C:\\Users\\Francis Ramirez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Francis Ramirez\\Source\\Repos\\schoolsa\\School\\School.Web\\obj\\",
+      "outputPath": "D:\\prosa\\schoolsa\\School\\School.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

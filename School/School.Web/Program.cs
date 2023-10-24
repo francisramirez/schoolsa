@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using School.Domain.Repository;
 using School.Infrastructure.Context;
+using School.Infrastructure.Interfaces;
 using School.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);

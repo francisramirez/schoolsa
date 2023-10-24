@@ -28,3 +28,8 @@ C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Deb
 C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.csproj.CoreCompileInputs.cache
 C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.dll
 C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.pdb
+D:\prosa\schoolsa\School\School.Application\bin\Debug\netstandard2.1\School.Domain.dll
+D:\prosa\schoolsa\School\School.Application\bin\Debug\netstandard2.1\School.Infrastructure.dll
+D:\prosa\schoolsa\School\School.Application\bin\Debug\netstandard2.1\School.Infrastructure.pdb
+D:\prosa\schoolsa\School\School.Application\bin\Debug\netstandard2.1\School.Domain.pdb
+D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.csproj.CopyComplete

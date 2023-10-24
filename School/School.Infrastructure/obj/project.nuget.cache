@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8mG0q1EgMDRmCRFvDZ+UEthcGoiysJnIqKca702vqYDhNfoeURE/I4PMWoVqeXeWcpGytcCIVh4D4Cc4SgBBJw==",
+  "dgSpecHash": "e75UkrRddPp0tE49M8CHQXYh7hZqmiQs2k10fLUXWD/DRge03f6A/bdegm8hkf9eAqfUB2671EedE0pe/h8lMQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Francis Ramirez\\Source\\Repos\\schoolsa\\School\\School.Infrastructure\\School.Infrastructure.csproj",
+  "projectFilePath": "D:\\prosa\\schoolsa\\School\\School.Infrastructure\\School.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

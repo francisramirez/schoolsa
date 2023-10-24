@@ -11,11 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\School.Infrastructure\School.Infrastructure.csproj" />
+    <Folder Include="Models\Modules\Instructor\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Modules\Instructor\" />
+    <ProjectReference Include="..\School.Application\School.Application.csproj" />
+    <ProjectReference Include="..\School.Ioc\School.Ioc.csproj" />
   </ItemGroup>
 
 </Project>

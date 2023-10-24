@@ -257,17 +257,20 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.32": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "Microsoft.Extensions.Logging/3.1.32": {
@@ -1779,6 +1782,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "School.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "School.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/School.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/School.Application.dll": {}
+        }
+      },
       "School.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -1802,6 +1818,20 @@
         },
         "runtime": {
           "bin/placeholder/School.Infrastructure.dll": {}
+        }
+      },
+      "School.Ioc/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "School.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/School.Ioc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/School.Ioc.dll": {}
         }
       }
     }
@@ -2175,18 +2205,29 @@
         "microsoft.extensions.dependencyinjection.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.32": {
-      "sha512": "dARl3iAcHZshMvnXtKpLGES4QZq8ExxIQnF2s8pXfP3MJOOXRSBsk+UmA3TMVN4hPr4O2QFS8AMJp9GDD/4lDw==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "sha512": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.32",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.3.1.32.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "Microsoft.Extensions.Logging/3.1.32": {
@@ -6105,6 +6146,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "School.Application/1.0.0": {
+      "type": "project",
+      "path": "../School.Application/School.Application.csproj",
+      "msbuildProject": "../School.Application/School.Application.csproj"
+    },
     "School.Domain/1.0.0": {
       "type": "project",
       "path": "../School.Domain/School.Domain.csproj",
@@ -6114,11 +6160,17 @@
       "type": "project",
       "path": "../School.Infrastructure/School.Infrastructure.csproj",
       "msbuildProject": "../School.Infrastructure/School.Infrastructure.csproj"
+    },
+    "School.Ioc/1.0.0": {
+      "type": "project",
+      "path": "../School.Ioc/School.Ioc.csproj",
+      "msbuildProject": "../School.Ioc/School.Ioc.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "School.Infrastructure >= 1.0.0",
+      "School.Application >= 1.0.0",
+      "School.Ioc >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -6129,11 +6181,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Francis Ramirez\\Source\\Repos\\schoolsa\\School\\School.Api\\School.Api.csproj",
+      "projectUniqueName": "D:\\prosa\\schoolsa\\School\\School.Api\\School.Api.csproj",
       "projectName": "School.Api",
-      "projectPath": "C:\\Users\\Francis Ramirez\\Source\\Repos\\schoolsa\\School\\School.Api\\School.Api.csproj",
+      "projectPath": "D:\\prosa\\schoolsa\\School\\School.Api\\School.Api.csproj",
       "packagesPath": "C:\\Users\\Francis Ramirez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Francis Ramirez\\Source\\Repos\\schoolsa\\School\\School.Api\\obj\\",
+      "outputPath": "D:\\prosa\\schoolsa\\School\\School.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6155,8 +6207,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Francis Ramirez\\Source\\Repos\\schoolsa\\School\\School.Infrastructure\\School.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Francis Ramirez\\Source\\Repos\\schoolsa\\School\\School.Infrastructure\\School.Infrastructure.csproj"
+            "D:\\prosa\\schoolsa\\School\\School.Application\\School.Application.csproj": {
+              "projectPath": "D:\\prosa\\schoolsa\\School\\School.Application\\School.Application.csproj"
+            },
+            "D:\\prosa\\schoolsa\\School\\School.Ioc\\School.Ioc.csproj": {
+              "projectPath": "D:\\prosa\\schoolsa\\School\\School.Ioc\\School.Ioc.csproj"
             }
           }
         }

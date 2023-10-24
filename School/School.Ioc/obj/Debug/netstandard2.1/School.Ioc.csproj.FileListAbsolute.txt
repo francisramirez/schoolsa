@@ -28,3 +28,10 @@ C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Ioc\obj\Debug\netst
 C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.csproj.CoreCompileInputs.cache
 C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.dll
 C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.pdb
+D:\prosa\schoolsa\School\School.Ioc\bin\Debug\netstandard2.1\School.Application.dll
+D:\prosa\schoolsa\School\School.Ioc\bin\Debug\netstandard2.1\School.Domain.dll
+D:\prosa\schoolsa\School\School.Ioc\bin\Debug\netstandard2.1\School.Infrastructure.dll
+D:\prosa\schoolsa\School\School.Ioc\bin\Debug\netstandard2.1\School.Application.pdb
+D:\prosa\schoolsa\School\School.Ioc\bin\Debug\netstandard2.1\School.Domain.pdb
+D:\prosa\schoolsa\School\School.Ioc\bin\Debug\netstandard2.1\School.Infrastructure.pdb
+D:\prosa\schoolsa\School\School.Ioc\obj\Debug\netstandard2.1\School.Ioc.csproj.CopyComplete

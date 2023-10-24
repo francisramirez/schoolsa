@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sMnwVZD2jYWNRNNhNe5qFNl1ct74DiHBc55QQxQI7R65pv2cT6LhLgNATQ6gUHEd5F8xzFJ17TPa4MDEKRUp0Q==",
+  "dgSpecHash": "AO2W64jCI4mkr2ilizvK2trESp/8w6z3w8osyDVPUE2C4aMznaBYKcSYYNQJzJNfIEf9xOaSj/1/O6cLqQkeeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Francis Ramirez\\Source\\Repos\\schoolsa\\School\\School.Api\\School.Api.csproj",
+  "projectFilePath": "D:\\prosa\\schoolsa\\School\\School.Api\\School.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
@@ -20,7 +20,7 @@
     "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.32\\microsoft.extensions.configuration.abstractions.3.1.32.nupkg.sha512",
     "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.32\\microsoft.extensions.configuration.binder.3.1.32.nupkg.sha512",
     "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.32\\microsoft.extensions.dependencyinjection.3.1.32.nupkg.sha512",
-    "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.32\\microsoft.extensions.dependencyinjection.abstractions.3.1.32.nupkg.sha512",
+    "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.extensions.logging\\3.1.32\\microsoft.extensions.logging.3.1.32.nupkg.sha512",
     "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.32\\microsoft.extensions.logging.abstractions.3.1.32.nupkg.sha512",
     "C:\\Users\\Francis Ramirez\\.nuget\\packages\\microsoft.extensions.options\\3.1.32\\microsoft.extensions.options.3.1.32.nupkg.sha512",

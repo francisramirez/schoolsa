@@ -156,3 +156,7 @@ C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Api\obj\Debug\net6.
 C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Api\obj\Debug\net6.0\School.Api.pdb
 C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Api\obj\Debug\net6.0\School.Api.genruntimeconfig.cache
 C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Api\obj\Debug\net6.0\ref\School.Api.dll
+D:\prosa\schoolsa\School\School.Api\bin\Debug\net6.0\School.Application.dll
+D:\prosa\schoolsa\School\School.Api\bin\Debug\net6.0\School.Ioc.dll
+D:\prosa\schoolsa\School\School.Api\bin\Debug\net6.0\School.Application.pdb
+D:\prosa\schoolsa\School\School.Api\bin\Debug\net6.0\School.Ioc.pdb

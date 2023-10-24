@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using School.Api.Models.Module.Course;
+using School.Api.Models.Modules.Course;
 using School.Domain.Entities;
 using School.Infrastructure.Interfaces;
 
@@ -21,7 +21,8 @@ namespace School.Api.Controllers
         [HttpGet("GetCourseByDepartmentId")]
         public IActionResult GetCourseByDepartmentId(int departmentId)
         {
-            var courses = this.courseRepository.GetCoursesByDepartment(departmentId);
+            var courses = new List<Course>();
+                //this.courseRepository.GetCoursesByDepartment(departmentId);
             return Ok(courses);
         }
 

@@ -1,6 +1,6 @@
 ﻿using School.Api.Models.Core;
 
-namespace School.Api.Models.Module.Course
+namespace School.Api.Models.Modules.Course
 {
     public class CourseUpdateModel : CourseBaseModel
     {
