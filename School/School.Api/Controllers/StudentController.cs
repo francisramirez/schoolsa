@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using School.Api.Models.Modules.Student;
 using School.Domain.Entities;
-using School.Domain.Repository;
+using School.Infrastructure.Interfaces;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace School.Api.Controllers
 {

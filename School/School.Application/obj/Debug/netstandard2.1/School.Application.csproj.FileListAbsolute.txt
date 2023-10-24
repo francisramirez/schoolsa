@@ -18,3 +18,13 @@ D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Appl
 D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.csproj.CoreCompileInputs.cache
 D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.dll
 D:\prosa\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.pdb
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\bin\Debug\netstandard2.1\School.Application.deps.json
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\bin\Debug\netstandard2.1\School.Application.dll
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\bin\Debug\netstandard2.1\School.Application.pdb
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.csproj.AssemblyReference.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.AssemblyInfoInputs.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.AssemblyInfo.cs
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.csproj.CoreCompileInputs.cache
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.dll
+C:\Users\Francis Ramirez\Source\Repos\schoolsa\School\School.Application\obj\Debug\netstandard2.1\School.Application.pdb

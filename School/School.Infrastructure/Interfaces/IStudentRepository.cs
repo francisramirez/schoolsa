@@ -1,13 +1,12 @@
 ﻿using School.Domain.Entities;
+using School.Domain.Repository;
 using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
+using System.Text;
 
-namespace School.Domain.Repository
+namespace School.Infrastructure.Interfaces
 {
     public interface IStudentRepository : IBaseRepository<Student>
     {
-       
-            
     }
 }

@@ -9,47 +9,10 @@ using System.Linq.Expressions;
 
 namespace School.Infrastructure.Repositories
 {
-    public class InstructorRepository : IInstructorRepository
+    public class InstructorRepository  
     {
-        private readonly SchoolContext context;
+         
 
-        public InstructorRepository(SchoolContext context)
-        {
-            this.context = context;
-        }
-
-        public bool Exists(Expression<Func<Instructor, bool>> filter)
-        {
-            
-            return this.context.Instructors.Any(filter);
-
-        }
-
-        public Instructor GetInstructor(int Id)
-        {
-           
-            return this.context.Instructors.Find(Id);
-        }
-
-        public List<Instructor> GetInstructors()
-        {
-
-            return this.context.Instructors.Where(ca => !ca.Deleted).ToList();
-        }
-
-        public void Remove(Instructor instructor)
-        {
-            this.context.Remove(instructor);
-        }
-
-        public void Save(Instructor instructor)
-        {
-            this.context.Instructors.Add(instructor);
-        }
-
-        public void Update(Instructor instructor)
-        {
-            this.context.Update(instructor);
-        }
+       
     }
 }
