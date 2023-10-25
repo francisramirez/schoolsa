@@ -1,7 +1,7 @@
 ﻿
 namespace School.Application.Core
 {
-    public interface IBaseServices<TDtoAdd, TDtoUpdate, TDtoRemove>
+    public interface IBaseService<TDtoAdd, TDtoUpdate, TDtoRemove>
     {
         ServiceResult GetAll();
         ServiceResult GetById(int Id);

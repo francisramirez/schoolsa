@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using School.Api.Models.Modules.Course;
+using School.Application.Contracts;
+using School.Application.Dtos.Course;
 using School.Domain.Entities;
 using School.Infrastructure.Interfaces;
 
@@ -10,84 +12,84 @@ namespace School.Api.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
-        private readonly ICourseRepository courseRepository;
+        private readonly ICourseService courseService;
 
-        public CourseController(ICourseRepository courseRepository)
+        public CourseController(ICourseService courseService)
         {
-            this.courseRepository = courseRepository;
+            this.courseService = courseService;
         }
 
 
-        [HttpGet("GetCourseByDepartmentId")]
-        public IActionResult GetCourseByDepartmentId(int departmentId)
-        {
-            var courses = new List<Course>();
-                //this.courseRepository.GetCoursesByDepartment(departmentId);
-            return Ok(courses);
-        }
-
-
-        [HttpGet]
+        [HttpGet("GetCourses")]
         public IActionResult GetCourses()
         {
-            var courses = this.courseRepository.GetEntities().Select(cd => new CourseGetAllModel()
+            var result = this.courseService.GetAll();
+
+            if (!result.Success)
             {
-                CourseId = cd.CourseID,
-                ChanageDate = cd.CreationDate,
-                Credits = cd.Credits,
-                ChangeUser = cd.CreationUser, 
-                DepartmentID= cd.DepartmentID, 
-                Title= cd.Title
-            }).ToList();
+                return BadRequest(result);
+            }
 
-
-            return Ok(courses);
+            return Ok(result);
         }
 
         // GET api/<CourseController>/5
         [HttpGet("GetCourse")]
         public IActionResult GetCourse(int id)
         {
-            var course = this.courseRepository.GetEntity(id);
-            return Ok(course);
+            var result = this.courseService.GetById(id);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
         }
 
 
         [HttpPost("SaveCourse")]
-        public IActionResult Post([FromBody] CourseAddModel courseAdd)
+        public IActionResult Post([FromBody] CourseDtoAdd courseAdd)
         {
+            var result = this.courseService.Save(courseAdd);
 
-            Course course = new Course()
+            if (!result.Success)
             {
-                CreationDate = courseAdd.ChanageDate,
-                CreationUser = courseAdd.ChangeUser,
-                Credits = courseAdd.Credits,
-                DepartmentID = courseAdd.DepartmentID,
-                Title = courseAdd.Title
-            };
+                return BadRequest(result);
+            }
 
-            this.courseRepository.Save(course);
-
-            return Ok();
+            return Ok(result);
         }
 
 
         [HttpPost("UpdateCourse")]
-        public IActionResult Put([FromBody] CourseUpdateModel courseUpdate)
+        public IActionResult Put([FromBody] CourseDtoUpdate courseUpdate)
         {
-            Course course = new Course()
+
+            var result = this.courseService.Update(courseUpdate);
+
+            if (!result.Success)
             {
-                CourseID = courseUpdate.CourseId,
-                CreationDate = courseUpdate.ChanageDate,
-                CreationUser = courseUpdate.ChangeUser,
-                Credits = courseUpdate.Credits,
-                DepartmentID = courseUpdate.DepartmentID,
-                Title = courseUpdate.Title
-            };
+                return BadRequest(result);
+            }
 
-            this.courseRepository.Update(course);
+            return Ok(result);
 
-            return Ok();
+        }
+
+        [HttpPost("RemoveCourse")]
+        public IActionResult Put([FromBody] CourseDtoRemove courseDtoRemove)
+        {
+
+            var result = this.courseService.Remove(courseDtoRemove);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+
         }
 
 

@@ -3,7 +3,7 @@ using School.Application.Dtos.Student;
 
 namespace School.Application.Contracts
 {
-    public interface IStudentService : IBaseServices<StudentDtoAdd, StudentDtoUpdate, StudentDtoRemove>
+    public interface IStudentService : IBaseService<StudentDtoAdd, StudentDtoUpdate, StudentDtoRemove>
     {
 
     }

@@ -11,7 +11,7 @@ namespace School.Domain.Entities
         public string? Title { get; set; }
         public int Credits { get; set; }
         public int DepartmentID { get; set; }
+      
 
-       
     }
 }

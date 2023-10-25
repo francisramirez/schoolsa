@@ -15,18 +15,12 @@ builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(bui
 //Dependencias de los repositorios //
 
 
-//builder.Services.AddTransient<IStudentRepository, StudentRepository>();
-
+//Dependecias del modulo de estudiantes //
 builder.Services.AddStudentDependecy();
 
-builder.Services.AddTransient<ICourseRepository, CourseRepository>();
 
-
-//Dependencias de los app servicies //
-
-
-
-
+//Dependencias del modulo de cursos //
+builder.Services.AddCourseDependecy();
 
 
 
