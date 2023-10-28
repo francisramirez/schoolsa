@@ -13,7 +13,7 @@ namespace School.Infrastructure.Repositories
     {
         private readonly SchoolContext context;
 
-        public CourseRepository(SchoolContext context): base(context)
+        public CourseRepository(SchoolContext context) : base(context)
         {
             this.context = context;
         }
@@ -25,18 +25,18 @@ namespace School.Infrastructure.Repositories
 
         public List<Course> GetCoursesByDepartment(int departmentId)
         {
-            return this.context.Courses.Where(cd => cd.DepartmentID == departmentId 
+            return this.context.Courses.Where(cd => cd.DepartmentID == departmentId
                                               && !cd.Deleted).ToList();
         }
 
         public List<CourseDeparmentModel> GetCoursesByDepartmentId(int departmentId)
         {
-            throw new System.NotImplementedException();
+            return this.GetCoursesDeparments().Where(cd => cd.DepartmentId == departmentId).ToList();
         }
 
         public List<CourseDeparmentModel> GetCoursesDeparments()
         {
-          
+
             var courses = (from co in this.GetEntities()
                            join depto in this.context.Departments on co.DepartmentID equals depto.DepartmentID
                            where !co.Deleted
@@ -53,12 +53,10 @@ namespace School.Infrastructure.Repositories
 
             return courses;
         }
-
         public override List<Course> GetEntities()
         {
             return base.GetEntities().Where(co => !co.Deleted).ToList();
         }
-
         public override void Save(Course entity)
         {
             base.Save(entity);
@@ -79,7 +77,6 @@ namespace School.Infrastructure.Repositories
             this.context.Courses.Update(course);
             this.context.SaveChanges();
         }
-
         public override void Remove(Course entity)
         {
             Course course = this.GetEntity(entity.CourseID);

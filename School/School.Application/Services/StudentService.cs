@@ -7,6 +7,8 @@ using System.Linq;
 using System;
 using School.Domain.Entities;
 using School.Application.Response;
+using Microsoft.Extensions.Configuration;
+using School.Application.Excepctions;
 
 namespace School.Application.Services
 {
@@ -14,12 +16,15 @@ namespace School.Application.Services
     {
         private readonly IStudentRepository studentRepository;
         private readonly ILogger<StudentService> logger;
+        private readonly IConfiguration configuration;
 
         public StudentService(IStudentRepository studentRepository,
-                              ILogger<StudentService> logger)
+                              ILogger<StudentService> logger,
+                              IConfiguration configuration)
         {
             this.studentRepository = studentRepository;
             this.logger = logger;
+            this.configuration = configuration;
         }
         public ServiceResult GetAll()
         {
@@ -115,11 +120,30 @@ namespace School.Application.Services
 
         public ServiceResult Save(StudentDtoAdd dtoAdd)
         {
-          //  ServiceResult result = new ServiceResult();
+
             StudentResponse result = new StudentResponse();
 
             try
             {
+                
+
+                if (string.IsNullOrEmpty(dtoAdd.FirstName))
+                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteNombreRequerido"]);
+
+
+                if (dtoAdd.FirstName.Length > 50)
+                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteNombreLongitud"]);
+
+                if (string.IsNullOrEmpty(dtoAdd.LastName))
+                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteApellidoRequerido"]);
+
+                if (dtoAdd.LastName.Length > 50)
+                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteApellidoLongitud"]);
+
+                if (!dtoAdd.EnrollmentDate.HasValue)
+                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteEnrollmentDateRequerido"]);
+
+              
                 Student student = new Student()
                 {
                     CreationDate = dtoAdd.ChangeDate,
@@ -131,14 +155,21 @@ namespace School.Application.Services
 
                 this.studentRepository.Save(student);
 
-                result.Message = "El estudiante fue creado correctamente.";
+                result.Message = this.configuration["MensajesEstdianteSuccess:AddSuccessMessage"];
                 result.StudentId = student.Id;
+            }
+            catch (StudentServiceException ssex)
+            {
+                result.Success = false;
+                result.Message = ssex.Message;
+                this.logger.LogError(result.Message, ssex.ToString());
+
             }
             catch (Exception ex)
             {
 
                 result.Success = false;
-                result.Message = $"Ocurrió un error guardando el estudiante.";
+                result.Message = this.configuration["MensajesEstdianteSuccess:AddErrorMessage"];
                 this.logger.LogError(result.Message, ex.ToString());
 
             }
@@ -151,6 +182,25 @@ namespace School.Application.Services
 
             try
             {
+
+                // Validaciones //
+
+                if (string.IsNullOrEmpty(dtoUpdate.FirstName))
+                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteNombreRequerido"]);
+
+
+                if (dtoUpdate.FirstName.Length > 50)
+                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteNombreLongitud"]);
+
+                if (string.IsNullOrEmpty(dtoUpdate.LastName))
+                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteApellidoRequerido"]);
+
+                if (dtoUpdate.LastName.Length > 50)
+                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteApellidoLongitud"]);
+
+                if (!dtoUpdate.EnrollmentDate.HasValue)
+                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteEnrollmentDateRequerido"]);
+
 
                 Student student = new Student()
                 {

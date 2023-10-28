@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using School.Api.Models.Modules.Student;
 using School.Application.Contracts;
+using School.Application.Core;
 using School.Application.Dtos.Student;
+using School.Application.Excepctions;
 using School.Domain.Entities;
 using School.Infrastructure.Interfaces;
 
@@ -46,12 +48,24 @@ namespace School.Api.Controllers
         [HttpPost("SaveStudent")]
         public IActionResult Post([FromBody] StudentDtoAdd studentApp)
         {
+            ServiceResult result = new ServiceResult();
 
-            var result = this.studentService.Save(studentApp);
-            
-            if (!result.Success)
-                return BadRequest(result);
-            
+
+            try
+            {
+                 result = studentService.Save(studentApp);
+
+                if (!result.Success)
+                    return BadRequest(result);
+
+            }
+            catch (StudentServiceException ssex)
+            {
+
+                result.Message = ssex.Message;
+                result.Success = false;
+            }
+           
 
             return Ok(result);
         }

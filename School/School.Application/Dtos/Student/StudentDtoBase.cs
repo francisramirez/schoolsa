@@ -1,4 +1,5 @@
 ﻿using School.Application.Dtos.Base;
+using System;
 
 namespace School.Application.Dtos.Student
 {
@@ -6,5 +7,7 @@ namespace School.Application.Dtos.Student
     {
         public string? LastName { get; set; }
         public string? FirstName { get; set; }
+        public DateTime? EnrollmentDate { get; set; }
+
     }
 }
