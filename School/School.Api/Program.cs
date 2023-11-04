@@ -1,8 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using School.Domain.Repository;
 using School.Infrastructure.Context;
-using School.Infrastructure.Interfaces;
-using School.Infrastructure.Repositories;
 using School.Ioc.Dependencies;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Agregar dependencia del contexto //
 
 builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolContext")));
-//Dependencias de los repositorios //
 
 
 //Dependecias del modulo de estudiantes //

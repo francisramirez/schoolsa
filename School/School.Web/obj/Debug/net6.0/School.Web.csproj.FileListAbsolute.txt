@@ -279,3 +279,7 @@ D:\prosa\schoolsa\School\School.Web\bin\Debug\net6.0\School.Infrastructure.dll
 D:\prosa\schoolsa\School\School.Web\bin\Debug\net6.0\School.Infrastructure.pdb
 D:\prosa\schoolsa\School\School.Web\bin\Debug\net6.0\School.Domain.pdb
 D:\prosa\schoolsa\School\School.Web\obj\Debug\net6.0\School.Web.csproj.CopyComplete
+D:\prosa\schoolsa\School\School.Web\bin\Debug\net6.0\School.Application.dll
+D:\prosa\schoolsa\School\School.Web\bin\Debug\net6.0\School.Ioc.dll
+D:\prosa\schoolsa\School\School.Web\bin\Debug\net6.0\School.Application.pdb
+D:\prosa\schoolsa\School\School.Web\bin\Debug\net6.0\School.Ioc.pdb
