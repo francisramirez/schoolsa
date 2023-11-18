@@ -1,10 +1,12 @@
 ﻿
 using System;
 using System.Linq;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using School.Application.Contracts;
 using School.Application.Core;
 using School.Application.Dtos.Course;
+using School.Application.Excepctions;
 using School.Domain.Entities;
 using School.Infrastructure.Interfaces;
 
@@ -14,12 +16,14 @@ namespace School.Application.Services
     {
         private readonly ICourseRepository courseRepository;
         private readonly ILogger<CourseService> logger;
+        private readonly IConfiguration configuration;
 
         public CourseService(ICourseRepository courseRepository,
-                             ILogger<CourseService> logger)
+                             ILogger<CourseService> logger, IConfiguration configuration)
         {
             this.courseRepository = courseRepository;
             this.logger = logger;
+            this.configuration = configuration;
         }
         public ServiceResult GetAll()
         {
@@ -69,7 +73,7 @@ namespace School.Application.Services
                 {
                     CourseID = dtoRemove.CourseID,
                     Deleted = dtoRemove.Deleted,
-                    UserDeleted = dtoRemove.ChangeUser, 
+                    UserDeleted = dtoRemove.ChangeUser,
                     DeletedDate = dtoRemove.ChangeDate
                 };
 
@@ -94,6 +98,15 @@ namespace School.Application.Services
 
             try
             {
+
+                if (string.IsNullOrEmpty(dtoAdd.Title))
+                    throw new CourseServiceException(this.configuration["MensajeValidaciones:cursoTitleRequerido"]);
+
+
+                if (dtoAdd.Title.Length > 100)
+                    throw new CourseServiceException(this.configuration["MensajeValidaciones:cursoTitleLongitud"]);
+
+
                 Course course = new Course()
                 {
                     Title = dtoAdd.Title,
@@ -106,6 +119,12 @@ namespace School.Application.Services
                 this.courseRepository.Save(course);
 
                 result.Message = "El curso fue guardado correctamente.";
+            }
+            catch (CourseServiceException cex) 
+            {
+                result.Success = false;
+                result.Message = cex.Message;
+                this.logger.LogError($"{result.Message}", cex.ToString());
             }
             catch (Exception ex)
             {
@@ -124,6 +143,14 @@ namespace School.Application.Services
 
             try
             {
+                if (string.IsNullOrEmpty(dtoUpdate.Title))
+                    throw new CourseServiceException(this.configuration["MensajeValidaciones:cursoTitleRequerido"]);
+
+
+                if (dtoUpdate.Title.Length > 100)
+                    throw new CourseServiceException(this.configuration["MensajeValidaciones:cursoTitleLongitud"]);
+
+
                 Course course = new Course()
                 {
                     CourseID = dtoUpdate.CourseID,

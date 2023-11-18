@@ -13,11 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolContext")));
 
-
 builder.Services.AddStudentDependecy();
 
 builder.Services.AddCourseDependecy();
-
 
 
 builder.Services.AddControllersWithViews();
