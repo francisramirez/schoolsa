@@ -1,0 +1,15 @@
+D:\prosa\schoolsa\School\School.CommonPrinciples\bin\Debug\net6.0\School.CommonPrinciples.exe
+D:\prosa\schoolsa\School\School.CommonPrinciples\bin\Debug\net6.0\School.CommonPrinciples.deps.json
+D:\prosa\schoolsa\School\School.CommonPrinciples\bin\Debug\net6.0\School.CommonPrinciples.runtimeconfig.json
+D:\prosa\schoolsa\School\School.CommonPrinciples\bin\Debug\net6.0\School.CommonPrinciples.dll
+D:\prosa\schoolsa\School\School.CommonPrinciples\bin\Debug\net6.0\School.CommonPrinciples.pdb
+D:\prosa\schoolsa\School\School.CommonPrinciples\obj\Debug\net6.0\School.CommonPrinciples.csproj.AssemblyReference.cache
+D:\prosa\schoolsa\School\School.CommonPrinciples\obj\Debug\net6.0\School.CommonPrinciples.GeneratedMSBuildEditorConfig.editorconfig
+D:\prosa\schoolsa\School\School.CommonPrinciples\obj\Debug\net6.0\School.CommonPrinciples.AssemblyInfoInputs.cache
+D:\prosa\schoolsa\School\School.CommonPrinciples\obj\Debug\net6.0\School.CommonPrinciples.AssemblyInfo.cs
+D:\prosa\schoolsa\School\School.CommonPrinciples\obj\Debug\net6.0\School.CommonPrinciples.csproj.CoreCompileInputs.cache
+D:\prosa\schoolsa\School\School.CommonPrinciples\obj\Debug\net6.0\School.CommonPrinciples.dll
+D:\prosa\schoolsa\School\School.CommonPrinciples\obj\Debug\net6.0\refint\School.CommonPrinciples.dll
+D:\prosa\schoolsa\School\School.CommonPrinciples\obj\Debug\net6.0\School.CommonPrinciples.pdb
+D:\prosa\schoolsa\School\School.CommonPrinciples\obj\Debug\net6.0\School.CommonPrinciples.genruntimeconfig.cache
+D:\prosa\schoolsa\School\School.CommonPrinciples\obj\Debug\net6.0\ref\School.CommonPrinciples.dll

@@ -9,7 +9,7 @@ using School.Domain.Entities;
 using School.Application.Response;
 using Microsoft.Extensions.Configuration;
 using School.Application.Excepctions;
-
+using School.Application.Extentions;
 namespace School.Application.Services
 {
     public class StudentService : IStudentService
@@ -125,25 +125,17 @@ namespace School.Application.Services
 
             try
             {
-                
-
-                if (string.IsNullOrEmpty(dtoAdd.FirstName))
-                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteNombreRequerido"]);
+                var validResult = dtoAdd.IsStudentValid(this.configuration);
 
 
-                if (dtoAdd.FirstName.Length > 50)
-                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteNombreLongitud"]);
+                if (!validResult.Success)
+                {
+                    result.Success = validResult.Success;
+                    result.Message = validResult.Message;
+                    return result;
+                }
 
-                if (string.IsNullOrEmpty(dtoAdd.LastName))
-                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteApellidoRequerido"]);
 
-                if (dtoAdd.LastName.Length > 50)
-                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteApellidoLongitud"]);
-
-                if (!dtoAdd.EnrollmentDate.HasValue)
-                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteEnrollmentDateRequerido"]);
-
-              
                 Student student = new Student()
                 {
                     CreationDate = dtoAdd.ChangeDate,
@@ -183,23 +175,15 @@ namespace School.Application.Services
             try
             {
 
-                // Validaciones //
-
-                if (string.IsNullOrEmpty(dtoUpdate.FirstName))
-                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteNombreRequerido"]);
+                var validResult = dtoUpdate.IsStudentValid(this.configuration);
 
 
-                if (dtoUpdate.FirstName.Length > 50)
-                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteNombreLongitud"]);
-
-                if (string.IsNullOrEmpty(dtoUpdate.LastName))
-                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteApellidoRequerido"]);
-
-                if (dtoUpdate.LastName.Length > 50)
-                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteApellidoLongitud"]);
-
-                if (!dtoUpdate.EnrollmentDate.HasValue)
-                    throw new StudentServiceException(this.configuration["MensajeValidaciones:estudianteEnrollmentDateRequerido"]);
+                if (!validResult.Success)
+                {
+                    result.Success = validResult.Success;
+                    result.Message = validResult.Message;
+                    return result;
+                }
 
 
                 Student student = new Student()

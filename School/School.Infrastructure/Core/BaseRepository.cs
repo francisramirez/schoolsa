@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 
 namespace School.Infrastructure.Core
 {
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
+    public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
         private readonly SchoolContext context;
         private DbSet<TEntity> entities;
@@ -34,6 +34,7 @@ namespace School.Infrastructure.Core
 
         public virtual List<TEntity> GetEntities()
         {
+            
             return entities.ToList();
         }
 

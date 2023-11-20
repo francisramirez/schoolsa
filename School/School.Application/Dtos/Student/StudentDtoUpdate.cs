@@ -9,6 +9,7 @@ namespace School.Application.Dtos.Student
     {
      
         public int Id { get; set; }
+
      
     }
 }

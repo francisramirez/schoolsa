@@ -59,6 +59,7 @@ namespace School.Infrastructure.Repositories
         }
         public override void Save(Course entity)
         {
+           
             base.Save(entity);
             this.context.SaveChanges();
         }

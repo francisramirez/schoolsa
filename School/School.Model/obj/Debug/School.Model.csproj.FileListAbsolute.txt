@@ -1,0 +1,12 @@
+D:\prosa\schoolsa\School\School.Model\bin\Debug\School.Model.dll.config
+D:\prosa\schoolsa\School\School.Model\bin\Debug\School.Model.dll
+D:\prosa\schoolsa\School\School.Model\bin\Debug\School.Model.pdb
+D:\prosa\schoolsa\School\School.Model\bin\Debug\EntityFramework.dll
+D:\prosa\schoolsa\School\School.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\prosa\schoolsa\School\School.Model\bin\Debug\EntityFramework.xml
+D:\prosa\schoolsa\School\School.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\prosa\schoolsa\School\School.Model\obj\Debug\School.Model.csproj.AssemblyReference.cache
+D:\prosa\schoolsa\School\School.Model\obj\Debug\School.Model.csproj.CoreCompileInputs.cache
+D:\prosa\schoolsa\School\School.Model\obj\Debug\School.Model.csproj.CopyComplete
+D:\prosa\schoolsa\School\School.Model\obj\Debug\School.Model.dll
+D:\prosa\schoolsa\School\School.Model\obj\Debug\School.Model.pdb
