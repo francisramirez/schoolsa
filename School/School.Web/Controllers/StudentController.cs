@@ -1,14 +1,18 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using School.Application.Contracts;
 using School.Application.Core;
 using School.Application.Dtos.Student;
+using School.Web.Models.Responses;
 
 namespace School.Web.Controllers
 {
     public class StudentController : Controller
     {
         private readonly IStudentService studentService;
+
+        HttpClientHandler clientHandler = new HttpClientHandler();
 
         public StudentController(IStudentService studentService)
         {
@@ -18,29 +22,70 @@ namespace School.Web.Controllers
         // GET: StudentController
         public ActionResult Index()
         {
-            var result = this.studentService.GetAll();
+            StudentListResponse studentList = new StudentListResponse();
 
-            if (!result.Success)
+
+            using (var client = new HttpClient(this.clientHandler))
             {
-                ViewBag.Message = result.Message;
-                return View();
+                using (var response = client.GetAsync("http://localhost:5214/api/Student/GetStudents").Result)
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string apiResponse = response.Content.ReadAsStringAsync().Result;
+
+                        studentList = JsonConvert.DeserializeObject<StudentListResponse>(apiResponse);
+
+                        if (!studentList.success)
+                        {
+                            ViewBag.Message = studentList.message;
+                            return View();
+                        }
+
+
+                    }
+                    else
+                    {
+                        studentList.message = "Error conectandose al api.";
+                        studentList.success = false;
+                        ViewBag.Message = studentList.message;
+                        return View();
+                    }
+                }
             }
 
-            return View(result.Data);
+            return View(studentList.data);
         }
 
         // GET: StudentController/Details/5
         public ActionResult Details(int id)
         {
-            var result = this.studentService.GetById(id);
 
-            if (!result.Success)
+            StudentDetailResponse studentDetailResponse = new StudentDetailResponse();
+
+
+            using (var client = new HttpClient(this.clientHandler))
             {
-                ViewBag.Message = result.Message;
-                return View();
+
+                var url = $"http://localhost:5214/api/Student/GetStudent?id={id}";
+
+                using (var response = client.GetAsync(url).Result)
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string apiResponse = response.Content.ReadAsStringAsync().Result;
+
+                        studentDetailResponse = JsonConvert.DeserializeObject<StudentDetailResponse>(apiResponse);
+
+                        if (!studentDetailResponse.success)
+                            ViewBag.Message = studentDetailResponse.message;
+                        
+
+                    }
+                }
             }
 
-            return View(result.Data);
+
+            return View(studentDetailResponse.data);
         }
 
         // GET: StudentController/Create
@@ -54,24 +99,51 @@ namespace School.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(StudentDtoAdd studentDtoAdd)
         {
-            ServiceResult result = new ServiceResult();
+            BaseResponse baseResponse = new BaseResponse();
 
             try
             {
 
-                result = this.studentService.Save(studentDtoAdd);
-
-                if (!result.Success)
+                using (var client = new HttpClient(this.clientHandler))
                 {
-                    ViewBag.Message = result.Message;
-                    return View();
+
+                    var url = $"http://localhost:5214/api/Student/SaveStudent";
+
+                    studentDtoAdd.ChangeDate = DateTime.Now;
+                    studentDtoAdd.ChangeUser = 1;
+
+                    StringContent content = new StringContent(JsonConvert.SerializeObject(studentDtoAdd), System.Text.Encoding.UTF8, "application/json");
+
+                    using (var response = client.PostAsync(url, content).Result)
+                    {
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string apiResponse = response.Content.ReadAsStringAsync().Result;
+
+                            baseResponse = JsonConvert.DeserializeObject<BaseResponse>(apiResponse);
+
+                            if (!baseResponse.success)
+                            {
+                                ViewBag.Message = baseResponse.message;
+                                return View();
+                            }
+
+                        }
+                        else
+                        {
+                            baseResponse.message = "Error conectandose al api.";
+                            baseResponse.success = false;
+                            ViewBag.Message = baseResponse.message;
+                            return View();
+                        }
+                    }
                 }
 
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                ViewBag.Message = result.Message;
+                ViewBag.Message = baseResponse.message;
                 return View();
             }
         }
@@ -79,49 +151,80 @@ namespace School.Web.Controllers
         // GET: StudentController/Edit/5
         public ActionResult Edit(int id)
         {
-            var result = this.studentService.GetById(id);
+            StudentDetailResponse studentDetailResponse = new StudentDetailResponse();
 
-            if (!result.Success)
+
+            using (var client = new HttpClient(this.clientHandler))
             {
-                ViewBag.Message = result.Message;
-                return View();
+
+                var url = $"http://localhost:5214/api/Student/GetStudent?id={id}";
+
+                using (var response = client.GetAsync(url).Result)
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string apiResponse = response.Content.ReadAsStringAsync().Result;
+
+                        studentDetailResponse = JsonConvert.DeserializeObject<StudentDetailResponse>(apiResponse);
+
+                    }
+                }
             }
 
-            var datos = (StudentDtoGetAll)result.Data;
 
-            StudentDtoUpdate studentDto = new StudentDtoUpdate()
-            {
-                Id = datos.StudentId,
-                EnrollmentDate = datos.EnrollmentDate,
-                FirstName = datos.FirstName,
-                LastName = datos.LastName
-            };
-
-            return View(studentDto);
+            return View(studentDetailResponse.data);
         }
+
 
         // POST: StudentController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(StudentDtoUpdate studentDtoUpdate)
         {
-            ServiceResult result = new ServiceResult();
+            BaseResponse baseResponse = new BaseResponse();
 
             try
             {
-                result = this.studentService.Update(studentDtoUpdate);
 
-                if (!result.Success)
+                using (var client = new HttpClient(this.clientHandler))
                 {
-                    ViewBag.Message = result.Message;
-                    return View();
+
+                    var url = $"http://localhost:5214/api/Student/UpdateStudent";
+
+                    studentDtoUpdate.ChangeDate = DateTime.Now;
+                    studentDtoUpdate.ChangeUser = 1;
+
+                    StringContent content = new StringContent(JsonConvert.SerializeObject(studentDtoUpdate), System.Text.Encoding.UTF8,"application/json");
+
+                    using (var response = client.PostAsync(url, content).Result)
+                    {
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string apiResponse = response.Content.ReadAsStringAsync().Result;
+
+                            baseResponse = JsonConvert.DeserializeObject<BaseResponse>(apiResponse);
+
+                            if (!baseResponse.success)
+                            {
+                                ViewBag.Message = baseResponse.message;
+                                return View();
+                            }
+
+                        }
+                        else
+                        {
+                            ViewBag.Message = baseResponse.message;
+                            return View();
+                        }
+                    }
                 }
+
 
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                ViewBag.Message = result.Message;
+                ViewBag.Message = baseResponse.message;
                 return View();
             }
         }

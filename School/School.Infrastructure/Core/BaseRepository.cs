@@ -24,11 +24,13 @@ namespace School.Infrastructure.Core
 
         public virtual bool Exists(Expression<Func<TEntity, bool>> filter)
         {
+            
             return this.entities.Any(filter);
         }
 
         public virtual List<TEntity> FindAll(Expression<Func<TEntity, bool>> filter)
         {
+           
             return this.entities.Where(filter).ToList();
         }
 
@@ -58,4 +60,6 @@ namespace School.Infrastructure.Core
             this.entities.Update(entity);
         }
     }
+
+
 }

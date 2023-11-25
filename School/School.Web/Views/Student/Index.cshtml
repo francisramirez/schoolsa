@@ -1,4 +1,4 @@
-﻿@model IEnumerable<School.Application.Dtos.Student.StudentDtoGetAll>
+﻿@model IEnumerable<School.Web.Models.Responses.StudentViewResult>
 
 @{
     ViewData["Title"] = "Index";
@@ -12,44 +12,45 @@
 <table class="table">
     <thead>
         <tr>
-           
+
             <th>
-                @Html.DisplayNameFor(model => model.FirstName)
+                @Html.DisplayNameFor(model => model.firstName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LastName)
+                @Html.DisplayNameFor(model => model.lastName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EnrollmentDate)
+                @Html.DisplayNameFor(model => model.enrollmentDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreationDate)
+                @Html.DisplayNameFor(model => model.creationDate)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-           
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreationDate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.StudentId  }) |
-                @Html.ActionLink("Details", "Details", new { id=item.StudentId}) 
-               
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.firstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.enrollmentDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.creationDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new {  id= item.studentId  }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.studentId})
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

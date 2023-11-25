@@ -1,4 +1,4 @@
-﻿@model School.Application.Dtos.Student.StudentDtoUpdate
+﻿@model School.Web.Models.Responses.StudentViewResult
 
 @{
     ViewData["Title"] = "Edit";
@@ -13,23 +13,23 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label class="control-label">Codigo</label>
-                <input asp-for="Id" class="form-control" readonly />
-                <span asp-validation-for="Id" class="text-danger"></span>
+                <input asp-for="studentId" class="form-control" readonly />
+                <span asp-validation-for="studentId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label  class="control-label">Last Name</label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
+                <input asp-for="lastName" class="form-control" />
+                <span asp-validation-for="lastName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label  class="control-label">First Name</label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <input asp-for="firstName" class="form-control" />
+                <span asp-validation-for="firstName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label class="control-label">Enrollment Date</label>
-                <input asp-for="EnrollmentDate" class="form-control" />
-                <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
+                <input asp-for="enrollmentDate" class="form-control" />
+                <span asp-validation-for="enrollmentDate" class="text-danger"></span>
             </div>
         
             <div class="form-group">

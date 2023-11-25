@@ -9,6 +9,7 @@ using School.Application.Dtos.Course;
 using School.Application.Excepctions;
 using School.Domain.Entities;
 using School.Infrastructure.Interfaces;
+using School.Application.Extentions;
 
 namespace School.Application.Services
 {
@@ -99,13 +100,14 @@ namespace School.Application.Services
             try
             {
 
-                if (string.IsNullOrEmpty(dtoAdd.Title))
-                    throw new CourseServiceException(this.configuration["MensajeValidaciones:cursoTitleRequerido"]);
+                var validresult = dtoAdd.IsCourseValid(this.configuration);
 
-
-                if (dtoAdd.Title.Length > 100)
-                    throw new CourseServiceException(this.configuration["MensajeValidaciones:cursoTitleLongitud"]);
-
+                if (!validresult.Success)
+                {
+                    result.Message = validresult.Message;
+                    result.Success = validresult.Success;
+                    return result;
+                }
 
                 Course course = new Course()
                 {
@@ -143,12 +145,14 @@ namespace School.Application.Services
 
             try
             {
-                if (string.IsNullOrEmpty(dtoUpdate.Title))
-                    throw new CourseServiceException(this.configuration["MensajeValidaciones:cursoTitleRequerido"]);
+                var validresult = dtoUpdate.IsCourseValid(this.configuration);
 
-
-                if (dtoUpdate.Title.Length > 100)
-                    throw new CourseServiceException(this.configuration["MensajeValidaciones:cursoTitleLongitud"]);
+                if (!validresult.Success)
+                {
+                    result.Message = validresult.Message;
+                    result.Success = validresult.Success;
+                    return result;
+                }
 
 
                 Course course = new Course()
